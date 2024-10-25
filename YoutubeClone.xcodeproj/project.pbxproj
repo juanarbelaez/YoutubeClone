@@ -13,6 +13,7 @@
 		D85322622CCAE71700948900 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D85322602CCAE71700948900 /* Main.storyboard */; };
 		D85322642CCAE71700948900 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D85322632CCAE71700948900 /* Assets.xcassets */; };
 		D85322672CCAE71700948900 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D85322652CCAE71700948900 /* LaunchScreen.storyboard */; };
+		D883C53E2CCBE4ED0064E51A /* VideoModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = D883C53D2CCBE4ED0064E51A /* VideoModel.swift */; };
 		D885A8052CCB53050005BCCD /* PlaylistModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = D885A8042CCB53050005BCCD /* PlaylistModel.swift */; };
 /* End PBXBuildFile section */
 
@@ -25,6 +26,7 @@
 		D85322632CCAE71700948900 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		D85322662CCAE71700948900 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		D85322682CCAE71700948900 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		D883C53D2CCBE4ED0064E51A /* VideoModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VideoModel.swift; sourceTree = "<group>"; };
 		D885A8042CCB53050005BCCD /* PlaylistModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlaylistModel.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -74,6 +76,7 @@
 			isa = PBXGroup;
 			children = (
 				D885A8042CCB53050005BCCD /* PlaylistModel.swift */,
+				D883C53D2CCBE4ED0064E51A /* VideoModel.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -152,6 +155,7 @@
 				D853225F2CCAE71700948900 /* ViewController.swift in Sources */,
 				D885A8052CCB53050005BCCD /* PlaylistModel.swift in Sources */,
 				D853225B2CCAE71700948900 /* AppDelegate.swift in Sources */,
+				D883C53E2CCBE4ED0064E51A /* VideoModel.swift in Sources */,
 				D853225D2CCAE71700948900 /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
