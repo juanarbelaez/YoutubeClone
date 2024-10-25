@@ -7,16 +7,24 @@
 
 import UIKit
 
+
+protocol RootPageProtocol: AnyObject {
+    func currentPage(_ index: Int)
+    
+}
+
 class RootPageViewController: UIPageViewController {
     
     var subviewControllers = [UIViewController]()
     var currentIndex: Int = 0
+    weak var delegateRoot: RootPageProtocol?
     
     override func viewDidLoad() {
         super.viewDidLoad()
 
         delegate = self
         dataSource = self
+        setupViewController()
     }
     
     private func setupViewController(){
@@ -69,6 +77,7 @@ extension RootPageViewController: UIPageViewControllerDelegate, UIPageViewContro
         print("finished", finished)
         if let index = pageViewController.viewControllers?.first?.view.tag{
             currentIndex = index
+            delegateRoot?.currentPage(index)
         }
     }
     
