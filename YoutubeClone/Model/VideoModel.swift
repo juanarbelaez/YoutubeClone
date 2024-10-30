@@ -15,27 +15,59 @@ struct VideoModel: Decodable {
     let pageInfo: PageInfo
     
     // MARK: - Item
-    struct Item: Codable {
-        let kind, etag, id: String
-        let snippet: Snippet
-        let contentDetails: ContentDetails
-        let status: Status
-        let statistics: Statistics
-        let player: Player
-        let topicDetails: TopicDetails
-        let recordingDetails: RecordingDetails
+    struct Item: Decodable {
+        let kind: String
+        let id: String?
+        let snippet: Snippet?
+        let contentDetails: ContentDetails?
+        let statistics: Statistics?
         
+        enum CodingKeys: String, CodingKey{
+            case kind
+            case id
+            case snippet
+            case contentDetails
+            case statistics
+        }
         
-        // MARK: - TopicDetails
-        struct TopicDetails: Codable {
-            let topicCategories: [String]
+        init(from decoder: Decoder) throws{
+            let container = try decoder.container(keyedBy: CodingKeys.self)
+            
+            self.kind = try container.decode(String.self, forKey: .kind)
+            
+            if let id = try? container.decode(VideoId.self, forKey: .id){
+                self.id = id.videoId
+            }else{
+                let id = try container.decode(String.self, forKey: .id)
+                self.id = id
+            }
+            
+            
+            if let snippet = try? container.decode(Snippet.self, forKey: .snippet){
+                self.snippet = snippet
+            }else{
+                self.snippet = nil
+            }
+            
+            if let contentDetails = try? container.decode(ContentDetails.self, forKey: .contentDetails){
+                self.contentDetails = contentDetails
+            }else{
+                self.contentDetails = nil
+            }
+            
+            if let statistics = try? container.decode(Statistics.self, forKey: .statistics){
+                self.statistics = statistics
+            }else{
+                self.statistics = nil
+            }
         }
-
-        // MARK: - Status
-        struct Status: Codable {
-            let uploadStatus, privacyStatus, license: String
-            let embeddable, publicStatsViewable, madeForKids: Bool
+        
+        struct VideoId: Decodable{
+            let kind: String
+            let videoId: String
         }
+        
+    
         
         // MARK: - Statistics
         struct Statistics: Codable {
@@ -54,47 +86,40 @@ struct VideoModel: Decodable {
         struct RecordingDetails: Codable {
         }
         
-        // MARK: - Player
-        struct Player: Codable {
-            let embedHTML: String
-
-            enum CodingKeys: String, CodingKey {
-                case embedHTML = "embedHtml"
-            }
-        }
+    
         
         // MARK: - Snippet
         struct Snippet: Codable {
-            let publishedAt: Date
-            let channelID, title, description: String
+            let publishedAt: String
+            let channelId:String
+            let title:String
+            let description: String
             let thumbnails: Thumbnails
             let channelTitle: String
-            let tags: [String]
-            let categoryID, liveBroadcastContent: String
-            let localized: Localized
-            let defaultAudioLanguage: String
+            let tags: [String]?
 
             enum CodingKeys: String, CodingKey {
                 case publishedAt
-                case channelID = "channelId"
-                case title, description, thumbnails, channelTitle, tags
-                case categoryID = "categoryId"
-                case liveBroadcastContent, localized, defaultAudioLanguage
+                case channelId
+                case title
+                case description
+                case thumbnails
+                case channelTitle
+                case tags
             }
             
-            // MARK: - Localized
-            struct Localized: Codable {
-                let title, description: String
-            }
+          
             
             // MARK: - Thumbnails
             struct Thumbnails: Codable {
-                let thumbnailsDefault, medium, high, standard: Default
-                let maxres: Default
+                let medium: Default
+                let high: Default
+                
 
                 enum CodingKeys: String, CodingKey {
-                    case thumbnailsDefault = "default"
-                    case medium, high, standard, maxres
+                    case medium
+                    case high
+                    
                 }
                 
                 
