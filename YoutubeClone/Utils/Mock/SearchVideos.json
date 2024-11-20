@@ -1,0 +1,80 @@
+{
+    "kind": "youtube#searchListResponse",
+    "etag": "uq56WqM8tFrmTvxVm1fbj2YsMZY",
+    "nextPageToken": "CAIQAA",
+    "regionCode": "CO",
+    "pageInfo": {
+        "totalResults": 1463,
+        "resultsPerPage": 2
+    },
+    "items": [
+        {
+            "kind": "youtube#searchResult",
+            "etag": "eTcZZ5lEPTgu50YVizY_2Kv7c5o",
+            "id": {
+                "kind": "youtube#video",
+                "videoId": "5oISL0RqSe0"
+            },
+            "snippet": {
+                "publishedAt": "2023-12-13T13:00:05Z",
+                "channelId": "UC_I_lCplbwIf60iUgsTE79g",
+                "title": "SwiftData - Filtrar y Ordenar datos con Predicate y Query.",
+                "description": "En este tutorial profundizo en cómo puedes aprovechar el poder de Searchable y Menu Picker para filtrar y organizar tus datos de ...",
+                "thumbnails": {
+                    "default": {
+                        "url": "https://i.ytimg.com/vi/5oISL0RqSe0/default.jpg",
+                        "width": 120,
+                        "height": 90
+                    },
+                    "medium": {
+                        "url": "https://i.ytimg.com/vi/5oISL0RqSe0/mqdefault.jpg",
+                        "width": 320,
+                        "height": 180
+                    },
+                    "high": {
+                        "url": "https://i.ytimg.com/vi/5oISL0RqSe0/hqdefault.jpg",
+                        "width": 480,
+                        "height": 360
+                    }
+                },
+                "channelTitle": "Victor Roldan Dev",
+                "liveBroadcastContent": "none",
+                "publishTime": "2023-12-13T13:00:05Z"
+            }
+        },
+        {
+            "kind": "youtube#searchResult",
+            "etag": "1fQKeYF5E8OHcQLFQSVOcfCK2Is",
+            "id": {
+                "kind": "youtube#video",
+                "videoId": "6qUFa9asnN4"
+            },
+            "snippet": {
+                "publishedAt": "2022-08-02T18:00:03Z",
+                "channelId": "UC_I_lCplbwIf60iUgsTE79g",
+                "title": "Cómo migrar MVC a MVVM 1/2 - Swift UIKit",
+                "description": "En este video te explico paso a paso cómo puedes migrar una aplicación hecha con la arquitectura MVC a MVVM. Debes tener ...",
+                "thumbnails": {
+                    "default": {
+                        "url": "https://i.ytimg.com/vi/6qUFa9asnN4/default.jpg",
+                        "width": 120,
+                        "height": 90
+                    },
+                    "medium": {
+                        "url": "https://i.ytimg.com/vi/6qUFa9asnN4/mqdefault.jpg",
+                        "width": 320,
+                        "height": 180
+                    },
+                    "high": {
+                        "url": "https://i.ytimg.com/vi/6qUFa9asnN4/hqdefault.jpg",
+                        "width": 480,
+                        "height": 360
+                    }
+                },
+                "channelTitle": "Victor Roldan Dev",
+                "liveBroadcastContent": "none",
+                "publishTime": "2022-08-02T18:00:03Z"
+            }
+        }
+    ]
+}
