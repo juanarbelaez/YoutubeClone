@@ -42,7 +42,8 @@ struct PlaylistItemModel: Decodable {
             
             // MARK: - Thumbnails
             struct Thumbnails: Codable {
-                let thumbnailsDefault, medium, high, standard: Default
+                let thumbnailsDefault, high, standard: Default
+                let medium: Default?
                 let maxres: Default
 
                 enum CodingKeys: String, CodingKey {
