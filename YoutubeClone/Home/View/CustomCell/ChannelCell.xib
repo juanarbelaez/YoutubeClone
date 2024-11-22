@@ -95,7 +95,7 @@
                         <color key="backgroundColor" name="backgroundColorYT"/>
                     </stackView>
                     <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="chevron.right" catalog="system" translatesAutoresizingMaskIntoConstraints="NO" id="fw8-nT-E0v">
-                        <rect key="frame" x="366" y="386" width="10" height="16.333333333333314"/>
+                        <rect key="frame" x="360" y="386" width="10" height="16.333333333333314"/>
                         <color key="tintColor" name="grayColor"/>
                         <constraints>
                             <constraint firstAttribute="width" constant="10" id="BbU-WH-hEM"/>
@@ -106,7 +106,6 @@
                 <color key="backgroundColor" name="backgroundColor"/>
                 <constraints>
                     <constraint firstAttribute="bottom" secondItem="4x2-uq-rJs" secondAttribute="bottom" id="02W-sY-vTZ"/>
-                    <constraint firstItem="fw8-nT-E0v" firstAttribute="trailing" secondItem="k5Y-iP-HLW" secondAttribute="trailing" id="1XN-Ky-22j"/>
                     <constraint firstItem="4x2-uq-rJs" firstAttribute="top" secondItem="T4K-hB-LDA" secondAttribute="bottom" id="2xk-vJ-OEZ"/>
                     <constraint firstItem="T4K-hB-LDA" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" id="IV8-3G-loA"/>
                     <constraint firstAttribute="trailing" secondItem="4x2-uq-rJs" secondAttribute="trailing" id="JrA-dt-5C8"/>
@@ -114,6 +113,7 @@
                     <constraint firstItem="4x2-uq-rJs" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" id="eSO-UW-BwT"/>
                     <constraint firstItem="T4K-hB-LDA" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" id="fLj-ju-h1V"/>
                     <constraint firstItem="fw8-nT-E0v" firstAttribute="centerY" secondItem="k5Y-iP-HLW" secondAttribute="centerY" id="fND-bG-cjY"/>
+                    <constraint firstAttribute="trailing" secondItem="fw8-nT-E0v" secondAttribute="trailing" constant="6" id="lSF-7f-pHa"/>
                 </constraints>
             </tableViewCellContentView>
             <viewLayoutGuide key="safeArea" id="njF-e1-oar"/>

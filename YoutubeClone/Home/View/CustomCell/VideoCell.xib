@@ -53,7 +53,7 @@
                         <color key="backgroundColor" name="backgroundColorYT"/>
                     </stackView>
                     <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="dots" translatesAutoresizingMaskIntoConstraints="NO" id="1ye-gn-A9T">
-                        <rect key="frame" x="349" y="0.0" width="13" height="13"/>
+                        <rect key="frame" x="357" y="0.0" width="13" height="13"/>
                         <constraints>
                             <constraint firstAttribute="height" constant="13" id="7Rn-xD-u9W"/>
                             <constraint firstAttribute="width" constant="13" id="UM3-g7-vcY"/>
@@ -66,7 +66,7 @@
                     <constraint firstItem="zjF-ud-z20" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="14" id="L5y-ry-2rD"/>
                     <constraint firstAttribute="trailing" secondItem="zjF-ud-z20" secondAttribute="trailing" constant="14" id="Nhd-7f-pnK"/>
                     <constraint firstAttribute="bottom" secondItem="zjF-ud-z20" secondAttribute="bottom" constant="14" id="QB9-Vk-265"/>
-                    <constraint firstItem="1ye-gn-A9T" firstAttribute="trailing" secondItem="bnY-8u-m43" secondAttribute="trailing" id="WV1-wi-Crk"/>
+                    <constraint firstAttribute="trailing" secondItem="1ye-gn-A9T" secondAttribute="trailing" constant="6" id="UKI-v3-5wD"/>
                     <constraint firstItem="1ye-gn-A9T" firstAttribute="top" secondItem="bnY-8u-m43" secondAttribute="top" id="x2y-hE-nr7"/>
                 </constraints>
             </tableViewCellContentView>

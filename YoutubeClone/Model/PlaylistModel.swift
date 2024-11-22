@@ -32,7 +32,7 @@ struct PlaylistModel: Decodable{
             let localized: Localized
             
             struct Thumbnails: Decodable {
-                let medium: medium?
+                let medium: medium
                 
                 struct medium: Decodable{
                     let url: String
