@@ -9,6 +9,8 @@ import UIKit
 import Kingfisher
 
 class PlaylistCell: UITableViewCell {
+    
+    
 
     @IBOutlet weak var videoTitle: UILabel!
     @IBOutlet weak var videoImage: UIImageView!
@@ -16,13 +18,22 @@ class PlaylistCell: UITableViewCell {
     @IBOutlet weak var dotsImage: UIImageView!
     @IBOutlet weak var videoCountOverlay: UILabel!
     
+    var didTapDotsButton: (()->Void)?
     
     override func awakeFromNib() {
         super.awakeFromNib()
-        dotsImage.image = UIImage(named: "dots")
+        dotsImage.image = UIImage(named: "dots")?.withRenderingMode(.alwaysTemplate)
         dotsImage.tintColor = UIColor(named: "whiteColor")
     }
-
+    
+    
+    @IBAction func dotsButtonTapped(_ sender: Any) {
+        
+        if let tap = didTapDotsButton{
+            tap()
+        }
+    }
+    
     func configCell(model: PlaylistModel.Item){
         selectionStyle = .none
         let imageUrl = model.snippet.thumbnails.medium.url

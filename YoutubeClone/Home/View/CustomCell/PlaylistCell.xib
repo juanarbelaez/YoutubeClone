@@ -78,13 +78,23 @@
                     </view>
                     <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="dots" translatesAutoresizingMaskIntoConstraints="NO" id="Zek-PU-QV8">
                         <rect key="frame" x="357" y="206.66666666666666" width="13" height="13"/>
+                        <color key="tintColor" name="whiteColor"/>
                         <constraints>
                             <constraint firstAttribute="height" constant="13" id="Q4c-xG-KcQ"/>
                             <constraint firstAttribute="width" constant="13" id="cOT-iK-jwU"/>
                         </constraints>
                     </imageView>
+                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="6ry-rr-KXS">
+                        <rect key="frame" x="357" y="206.66666666666666" width="13" height="13"/>
+                        <state key="normal" title="Button"/>
+                        <buttonConfiguration key="configuration" style="plain"/>
+                        <connections>
+                            <action selector="dotsButtonTapped:" destination="KGk-i7-Jjw" eventType="touchUpInside" id="ubx-Sy-Emh"/>
+                        </connections>
+                    </button>
                 </subviews>
                 <constraints>
+                    <constraint firstItem="6ry-rr-KXS" firstAttribute="height" secondItem="Zek-PU-QV8" secondAttribute="height" id="567-08-ze2"/>
                     <constraint firstItem="Viu-rA-fhM" firstAttribute="centerY" secondItem="Ege-CN-XfM" secondAttribute="centerY" id="Bx2-8L-eGm"/>
                     <constraint firstAttribute="trailing" secondItem="Zek-PU-QV8" secondAttribute="trailing" constant="6" id="DJK-J2-j4M"/>
                     <constraint firstItem="Ege-CN-XfM" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" id="H0r-z0-bJw"/>
@@ -93,9 +103,12 @@
                     <constraint firstAttribute="trailing" secondItem="Ege-CN-XfM" secondAttribute="trailing" constant="13" id="W2C-fx-u7b"/>
                     <constraint firstAttribute="bottom" secondItem="HWh-IW-klN" secondAttribute="bottom" constant="58" id="XdZ-OY-RXm"/>
                     <constraint firstItem="HWh-IW-klN" firstAttribute="centerX" secondItem="Ege-CN-XfM" secondAttribute="centerX" id="ZNY-Wo-bZa"/>
+                    <constraint firstItem="6ry-rr-KXS" firstAttribute="width" secondItem="Zek-PU-QV8" secondAttribute="width" id="bA2-3d-lNp"/>
                     <constraint firstItem="Viu-rA-fhM" firstAttribute="trailing" secondItem="Ege-CN-XfM" secondAttribute="trailing" id="dSH-br-QRN"/>
+                    <constraint firstItem="6ry-rr-KXS" firstAttribute="centerX" secondItem="Zek-PU-QV8" secondAttribute="centerX" id="dSn-g0-ddU"/>
                     <constraint firstItem="Ege-CN-XfM" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="13" id="fLZ-6l-qqB"/>
                     <constraint firstItem="Zek-PU-QV8" firstAttribute="centerY" secondItem="HWh-IW-klN" secondAttribute="centerY" id="rdX-Uw-3p8"/>
+                    <constraint firstItem="6ry-rr-KXS" firstAttribute="centerY" secondItem="Zek-PU-QV8" secondAttribute="centerY" id="t73-OW-W5Z"/>
                     <constraint firstItem="Viu-rA-fhM" firstAttribute="height" secondItem="Ege-CN-XfM" secondAttribute="height" id="zNq-P9-43E"/>
                 </constraints>
             </tableViewCellContentView>

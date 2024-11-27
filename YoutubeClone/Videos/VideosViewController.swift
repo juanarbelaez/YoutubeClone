@@ -8,22 +8,42 @@
 import UIKit
 
 class VideosViewController: UIViewController {
+    
 
+    @IBOutlet weak var tableViewVideos: UITableView!
+    lazy var presenter = VideosPresenter(delegate: self)
+    var videoList : [VideoModel.Item] = []
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        // Do any additional setup after loading the view.
+        configTableView()
+        Task{
+            await presenter.getVideos()
+        }
+    }
+    
+    func configTableView(){
+        
+        let nibVideos = UINib(nibName: "\(VideoCell.self)", bundle: nil)
+        tableViewVideos.register(nibVideos, forCellReuseIdentifier: "\(VideoCell.self)")
+        
+        tableViewVideos.separatorColor = .clear
     }
 
 
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destination.
-        // Pass the selected object to the new view controller.
-    }
-    */
+    
 
 }
+
+// Empezar en el 10:02 para la extension de los Delegates
+
+
+extension VideosViewController: VideosViewProtocol{
+    func getVideos(videoList: [VideoModel.Item]) {
+        self.videoList = videoList
+        tableViewVideos.reloadData()
+    }
+    
+}
+

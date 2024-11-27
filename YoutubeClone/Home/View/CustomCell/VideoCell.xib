@@ -59,14 +59,26 @@
                             <constraint firstAttribute="width" constant="13" id="UM3-g7-vcY"/>
                         </constraints>
                     </imageView>
+                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="8cO-1g-vRw">
+                        <rect key="frame" x="357" y="0.0" width="13" height="13"/>
+                        <state key="normal" title="Button"/>
+                        <buttonConfiguration key="configuration" style="plain"/>
+                        <connections>
+                            <action selector="dotsButtonTapped:" destination="KGk-i7-Jjw" eventType="touchUpInside" id="foG-co-rs0"/>
+                        </connections>
+                    </button>
                 </subviews>
                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                 <constraints>
+                    <constraint firstItem="8cO-1g-vRw" firstAttribute="height" secondItem="1ye-gn-A9T" secondAttribute="height" id="8sF-4x-GJi"/>
                     <constraint firstItem="zjF-ud-z20" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" id="AxW-yM-gfg"/>
+                    <constraint firstItem="8cO-1g-vRw" firstAttribute="width" secondItem="1ye-gn-A9T" secondAttribute="width" id="L01-yv-FvM"/>
                     <constraint firstItem="zjF-ud-z20" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="14" id="L5y-ry-2rD"/>
                     <constraint firstAttribute="trailing" secondItem="zjF-ud-z20" secondAttribute="trailing" constant="14" id="Nhd-7f-pnK"/>
                     <constraint firstAttribute="bottom" secondItem="zjF-ud-z20" secondAttribute="bottom" constant="14" id="QB9-Vk-265"/>
                     <constraint firstAttribute="trailing" secondItem="1ye-gn-A9T" secondAttribute="trailing" constant="6" id="UKI-v3-5wD"/>
+                    <constraint firstItem="8cO-1g-vRw" firstAttribute="centerX" secondItem="1ye-gn-A9T" secondAttribute="centerX" id="XeD-Gh-Xav"/>
+                    <constraint firstItem="8cO-1g-vRw" firstAttribute="centerY" secondItem="1ye-gn-A9T" secondAttribute="centerY" id="ZUd-WS-cvn"/>
                     <constraint firstItem="1ye-gn-A9T" firstAttribute="top" secondItem="bnY-8u-m43" secondAttribute="top" id="x2y-hE-nr7"/>
                 </constraints>
             </tableViewCellContentView>

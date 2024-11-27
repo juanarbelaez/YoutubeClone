@@ -62,21 +62,33 @@ extension HomeViewController: UITableViewDelegate, UITableViewDataSource{
             }
             channelCell.configCell(model: channel[indexPath.row])
             return channelCell
+            
         }else if let playlistItems = item as? [PlaylistItemModel.Item]{
             guard let playlistItemsCell = tableView.dequeueReusableCell(withIdentifier: "\(VideoCell.self)", for: indexPath) as? VideoCell else {
                 return UITableViewCell()
             }
+            playlistItemsCell.didTapDotsButton = {[weak self] in
+                self?.configBottomSheet()
+            }
             playlistItemsCell.configCell(model: playlistItems[indexPath.row])
             return playlistItemsCell
+            
         }else if let videos = item as? [VideoModel.Item]{
             guard let videoCell = tableView.dequeueReusableCell(withIdentifier: "\(VideoCell.self)", for: indexPath) as? VideoCell else {
                 return UITableViewCell()
             }
+            videoCell.didTapDotsButton = {[weak self] in
+                self?.configBottomSheet()
+            }
             videoCell.configCell(model: videos[indexPath.row])
             return videoCell
+            
         }else if let playlist = item as? [PlaylistModel.Item]{
             guard let playlistCell = tableView.dequeueReusableCell(withIdentifier: "\(PlaylistCell.self)", for: indexPath) as? PlaylistCell else {
                 return UITableViewCell()
+            }
+            playlistCell.didTapDotsButton = {[weak self] in
+                self?.configBottomSheet()
             }
             playlistCell.configCell(model: playlist[indexPath.row])
             return playlistCell
@@ -101,7 +113,11 @@ extension HomeViewController: UITableViewDelegate, UITableViewDataSource{
         return sectionView
     }
    
-    
+    func configBottomSheet (){
+        let vc = BottomSheetViewController()
+        vc.modalPresentationStyle = .overCurrentContext
+        self.present(vc, animated: false)
+    }
     
 }
 
