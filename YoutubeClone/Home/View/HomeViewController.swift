@@ -127,9 +127,9 @@ extension HomeViewController: HomeViewProtocol{
         objectList = list
         self.sectionTitleList = sectionTitleList
         
-        DispatchQueue.main.async {
-            self.tableViewHome.reloadData()
-        }
+//        DispatchQueue.main.async {
+        tableViewHome.reloadData()
+//        }
        
         
         

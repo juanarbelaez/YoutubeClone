@@ -23,7 +23,7 @@ class VideosPresenter{
         self.provider = provider
         
     }
-    
+    @MainActor
     func getVideos() async{
         do{
             let videos = try await provider.getVideos(channelId: Constants.channelId).items

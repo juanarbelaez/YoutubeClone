@@ -23,7 +23,7 @@ class HomePresenter{
         self.delegate = delegate
     }
     
-    
+    @MainActor
     func getHomeObjects() async{
         
         objectList.removeAll()
