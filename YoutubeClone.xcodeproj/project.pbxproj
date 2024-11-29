@@ -41,6 +41,8 @@
 		D883C55F2CCC18A10064E51A /* AboutViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D883C55D2CCC18A10064E51A /* AboutViewController.swift */; };
 		D883C5602CCC18A10064E51A /* AboutViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = D883C55E2CCC18A10064E51A /* AboutViewController.xib */; };
 		D885A8052CCB53050005BCCD /* PlaylistModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = D885A8042CCB53050005BCCD /* PlaylistModel.swift */; };
+		D886B76A2CF929C600DCD6E2 /* PlaylistsProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = D886B7692CF929C600DCD6E2 /* PlaylistsProvider.swift */; };
+		D886B76C2CF92A0C00DCD6E2 /* PlaylistsPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = D886B76B2CF92A0C00DCD6E2 /* PlaylistsPresenter.swift */; };
 		D8F696602CE57D3100454076 /* Utils.swift in Sources */ = {isa = PBXBuildFile; fileRef = D8F6965F2CE57D3100454076 /* Utils.swift */; };
 		D8F696712CE65F7800454076 /* ChannelCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = D8F6966F2CE65F7800454076 /* ChannelCell.swift */; };
 		D8F696722CE65F7800454076 /* ChannelCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = D8F696702CE65F7800454076 /* ChannelCell.xib */; };
@@ -89,6 +91,8 @@
 		D883C55D2CCC18A10064E51A /* AboutViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AboutViewController.swift; sourceTree = "<group>"; };
 		D883C55E2CCC18A10064E51A /* AboutViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = AboutViewController.xib; sourceTree = "<group>"; };
 		D885A8042CCB53050005BCCD /* PlaylistModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlaylistModel.swift; sourceTree = "<group>"; };
+		D886B7692CF929C600DCD6E2 /* PlaylistsProvider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlaylistsProvider.swift; sourceTree = "<group>"; };
+		D886B76B2CF92A0C00DCD6E2 /* PlaylistsPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlaylistsPresenter.swift; sourceTree = "<group>"; };
 		D8F6965F2CE57D3100454076 /* Utils.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Utils.swift; sourceTree = "<group>"; };
 		D8F6966F2CE65F7800454076 /* ChannelCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChannelCell.swift; sourceTree = "<group>"; };
 		D8F696702CE65F7800454076 /* ChannelCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ChannelCell.xib; sourceTree = "<group>"; };
@@ -288,6 +292,8 @@
 		D883C54A2CCC07A70064E51A /* Playlists */ = {
 			isa = PBXGroup;
 			children = (
+				D886B7662CF9297500DCD6E2 /* Model */,
+				D886B7672CF9298300DCD6E2 /* Presenter */,
 				D883C5552CCC18670064E51A /* PlaylistsViewController.swift */,
 				D883C5562CCC18670064E51A /* PlaylistsViewController.xib */,
 			);
@@ -321,6 +327,30 @@
 				D883C5412CCBFF7C0064E51A /* PlaylistItemModel.swift */,
 			);
 			path = Model;
+			sourceTree = "<group>";
+		};
+		D886B7662CF9297500DCD6E2 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				D886B7682CF9299B00DCD6E2 /* Provider */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		D886B7672CF9298300DCD6E2 /* Presenter */ = {
+			isa = PBXGroup;
+			children = (
+				D886B76B2CF92A0C00DCD6E2 /* PlaylistsPresenter.swift */,
+			);
+			path = Presenter;
+			sourceTree = "<group>";
+		};
+		D886B7682CF9299B00DCD6E2 /* Provider */ = {
+			isa = PBXGroup;
+			children = (
+				D886B7692CF929C600DCD6E2 /* PlaylistsProvider.swift */,
+			);
+			path = Provider;
 			sourceTree = "<group>";
 		};
 		D8F6966E2CE65F1700454076 /* CustomCell */ = {
@@ -481,6 +511,7 @@
 				D86FBAA22CCC78E100758FB5 /* HomeProvider.swift in Sources */,
 				D853225D2CCAE71700948900 /* SceneDelegate.swift in Sources */,
 				D86FBA952CCC657E00758FB5 /* ServiceLayer.swift in Sources */,
+				D886B76A2CF929C600DCD6E2 /* PlaylistsProvider.swift in Sources */,
 				D87F5F082CF129C600C48A1F /* SectionTitleView.swift in Sources */,
 				D883C55F2CCC18A10064E51A /* AboutViewController.swift in Sources */,
 				D883C5472CCC04420064E51A /* MainViewController.swift in Sources */,
@@ -488,6 +519,7 @@
 				D883C5452CCC04220064E51A /* RootPageViewController.swift in Sources */,
 				D86FBA9C2CCC6EDC00758FB5 /* Constants.swift in Sources */,
 				D8F696792CE65FA700454076 /* PlaylistCell.swift in Sources */,
+				D886B76C2CF92A0C00DCD6E2 /* PlaylistsPresenter.swift in Sources */,
 				D87F5F0C2CF14BA200C48A1F /* BottomSheetViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
