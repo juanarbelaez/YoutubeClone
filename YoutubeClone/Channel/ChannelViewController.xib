@@ -1,10 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="21507" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
-    <device id="retina6_12" orientation="portrait" appearance="light"/>
+    <device id="retina6_12" orientation="portrait" appearance="dark"/>
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="21505"/>
+        <capability name="Named colors" minToolsVersion="9.0"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
-        <capability name="System colors in document resources" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <objects>
@@ -17,14 +17,37 @@
         <view clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="i5M-Pr-FkT">
             <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="cGI-wB-c1I">
+                    <rect key="frame" x="16" y="59" width="361" height="262.33333333333331"/>
+                    <subviews>
+                        <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="channel-placeholder" translatesAutoresizingMaskIntoConstraints="NO" id="KgI-uK-W7H">
+                            <rect key="frame" x="0.0" y="0.0" width="361" height="246.66666666666666"/>
+                            <preferredSymbolConfiguration key="preferredSymbolConfiguration" scale="default"/>
+                        </imageView>
+                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="This channel doesn't feature any other channels." textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="hP4-8f-MUc">
+                            <rect key="frame" x="0.0" y="246.66666666666669" width="361" height="15.666666666666686"/>
+                            <fontDescription key="fontDescription" type="system" pointSize="13"/>
+                            <nil key="textColor"/>
+                            <nil key="highlightedColor"/>
+                        </label>
+                    </subviews>
+                </stackView>
+            </subviews>
             <viewLayoutGuide key="safeArea" id="fnl-2z-Ty3"/>
-            <color key="backgroundColor" systemColor="systemTealColor"/>
+            <color key="backgroundColor" name="backgroundColorYT"/>
+            <constraints>
+                <constraint firstItem="cGI-wB-c1I" firstAttribute="top" secondItem="fnl-2z-Ty3" secondAttribute="top" id="BiQ-zU-S3X"/>
+                <constraint firstItem="cGI-wB-c1I" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" constant="16" id="agl-l0-EcI"/>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="cGI-wB-c1I" secondAttribute="trailing" constant="16" id="wBk-uv-Ln9"/>
+            </constraints>
             <point key="canvasLocation" x="140" y="20"/>
         </view>
     </objects>
     <resources>
-        <systemColor name="systemTealColor">
-            <color red="0.18823529411764706" green="0.69019607843137254" blue="0.7803921568627451" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-        </systemColor>
+        <image name="channel-placeholder" width="299.5" height="246.5"/>
+        <namedColor name="backgroundColorYT">
+            <color red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
     </resources>
 </document>

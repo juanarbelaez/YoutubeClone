@@ -41,7 +41,7 @@ class PlaylistCell: UITableViewCell {
             videoImage.kf.setImage(with: url)
         }
         videoTitle.text = model.snippet.title
-        videoTitle.text = "\(model.contentDetails.itemCount) videos"
+        videoCount.text = "\(model.contentDetails.itemCount) videos"
         videoCountOverlay.text = String(model.contentDetails.itemCount)
         
     }
