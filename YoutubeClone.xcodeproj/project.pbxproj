@@ -8,6 +8,11 @@
 
 /* Begin PBXBuildFile section */
 		86FA321FC5984E57C91EFAB7 /* Pods_YoutubeClone.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 89737994FED21A2974E0026B /* Pods_YoutubeClone.framework */; };
+		D8332A8D2D01FA1900D1E98B /* UIColor+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = D8332A8C2D01FA1900D1E98B /* UIColor+Extension.swift */; };
+		D8332A8F2D01FC4900D1E98B /* UIImage+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = D8332A8E2D01FC4900D1E98B /* UIImage+Extension.swift */; };
+		D8332A922D025E3600D1E98B /* TabsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D8332A912D025E3600D1E98B /* TabsView.swift */; };
+		D8332A962D02621F00D1E98B /* OptionCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = D8332A942D02621F00D1E98B /* OptionCell.swift */; };
+		D8332A972D02621F00D1E98B /* OptionCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = D8332A952D02621F00D1E98B /* OptionCell.xib */; };
 		D853225B2CCAE71700948900 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D853225A2CCAE71700948900 /* AppDelegate.swift */; };
 		D853225D2CCAE71700948900 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D853225C2CCAE71700948900 /* SceneDelegate.swift */; };
 		D853225F2CCAE71700948900 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D853225E2CCAE71700948900 /* ViewController.swift */; };
@@ -49,6 +54,8 @@
 		D8E4B3F22CFDF200001E2112 /* AboutProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = D8E4B3F12CFDF200001E2112 /* AboutProvider.swift */; };
 		D8E4B3F52CFE1593001E2112 /* AboutCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = D8E4B3F32CFE1593001E2112 /* AboutCell.swift */; };
 		D8E4B3F62CFE1593001E2112 /* AboutCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = D8E4B3F42CFE1593001E2112 /* AboutCell.xib */; };
+		D8E7C3072CFF57D400932C2B /* BaseViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D8E7C3062CFF57D400932C2B /* BaseViewController.swift */; };
+		D8E7C3092CFF617600932C2B /* UITableView+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = D8E7C3082CFF617600932C2B /* UITableView+Extension.swift */; };
 		D8F696602CE57D3100454076 /* Utils.swift in Sources */ = {isa = PBXBuildFile; fileRef = D8F6965F2CE57D3100454076 /* Utils.swift */; };
 		D8F696712CE65F7800454076 /* ChannelCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = D8F6966F2CE65F7800454076 /* ChannelCell.swift */; };
 		D8F696722CE65F7800454076 /* ChannelCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = D8F696702CE65F7800454076 /* ChannelCell.xib */; };
@@ -62,6 +69,11 @@
 		66E548E179A7DD6F2D7BAB72 /* Pods-YoutubeClone.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-YoutubeClone.debug.xcconfig"; path = "Target Support Files/Pods-YoutubeClone/Pods-YoutubeClone.debug.xcconfig"; sourceTree = "<group>"; };
 		72FFE81E8B5A0D7A0E9F61B1 /* Pods-YoutubeClone.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-YoutubeClone.release.xcconfig"; path = "Target Support Files/Pods-YoutubeClone/Pods-YoutubeClone.release.xcconfig"; sourceTree = "<group>"; };
 		89737994FED21A2974E0026B /* Pods_YoutubeClone.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_YoutubeClone.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		D8332A8C2D01FA1900D1E98B /* UIColor+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIColor+Extension.swift"; sourceTree = "<group>"; };
+		D8332A8E2D01FC4900D1E98B /* UIImage+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIImage+Extension.swift"; sourceTree = "<group>"; };
+		D8332A912D025E3600D1E98B /* TabsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabsView.swift; sourceTree = "<group>"; };
+		D8332A942D02621F00D1E98B /* OptionCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OptionCell.swift; sourceTree = "<group>"; };
+		D8332A952D02621F00D1E98B /* OptionCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = OptionCell.xib; sourceTree = "<group>"; };
 		D85322572CCAE71700948900 /* YoutubeClone.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = YoutubeClone.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		D853225A2CCAE71700948900 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		D853225C2CCAE71700948900 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -105,6 +117,8 @@
 		D8E4B3F12CFDF200001E2112 /* AboutProvider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AboutProvider.swift; sourceTree = "<group>"; };
 		D8E4B3F32CFE1593001E2112 /* AboutCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AboutCell.swift; sourceTree = "<group>"; };
 		D8E4B3F42CFE1593001E2112 /* AboutCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = AboutCell.xib; sourceTree = "<group>"; };
+		D8E7C3062CFF57D400932C2B /* BaseViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseViewController.swift; sourceTree = "<group>"; };
+		D8E7C3082CFF617600932C2B /* UITableView+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UITableView+Extension.swift"; sourceTree = "<group>"; };
 		D8F6965F2CE57D3100454076 /* Utils.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Utils.swift; sourceTree = "<group>"; };
 		D8F6966F2CE65F7800454076 /* ChannelCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChannelCell.swift; sourceTree = "<group>"; };
 		D8F696702CE65F7800454076 /* ChannelCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ChannelCell.xib; sourceTree = "<group>"; };
@@ -141,6 +155,24 @@
 				89737994FED21A2974E0026B /* Pods_YoutubeClone.framework */,
 			);
 			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		D8332A902D025E2100D1E98B /* TabsView */ = {
+			isa = PBXGroup;
+			children = (
+				D8332A932D0261C800D1E98B /* Cell */,
+				D8332A912D025E3600D1E98B /* TabsView.swift */,
+			);
+			path = TabsView;
+			sourceTree = "<group>";
+		};
+		D8332A932D0261C800D1E98B /* Cell */ = {
+			isa = PBXGroup;
+			children = (
+				D8332A942D02621F00D1E98B /* OptionCell.swift */,
+				D8332A952D02621F00D1E98B /* OptionCell.xib */,
+			);
+			path = Cell;
 			sourceTree = "<group>";
 		};
 		D853224E2CCAE71700948900 = {
@@ -197,8 +229,10 @@
 		D86FBA9A2CCC6EC500758FB5 /* Utils */ = {
 			isa = PBXGroup;
 			children = (
+				D8E7C3032CFF503900932C2B /* Extensions */,
 				D86FBA9B2CCC6EDC00758FB5 /* Constants.swift */,
 				D8F6965F2CE57D3100454076 /* Utils.swift */,
+				D8E7C3062CFF57D400932C2B /* BaseViewController.swift */,
 			);
 			path = Utils;
 			sourceTree = "<group>";
@@ -274,6 +308,7 @@
 		D883C5432CCC03920064E51A /* Main */ = {
 			isa = PBXGroup;
 			children = (
+				D8332A902D025E2100D1E98B /* TabsView */,
 				D883C5442CCC04220064E51A /* RootPageViewController.swift */,
 				D883C5462CCC04420064E51A /* MainViewController.swift */,
 			);
@@ -417,6 +452,16 @@
 			path = Provider;
 			sourceTree = "<group>";
 		};
+		D8E7C3032CFF503900932C2B /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				D8E7C3082CFF617600932C2B /* UITableView+Extension.swift */,
+				D8332A8C2D01FA1900D1E98B /* UIColor+Extension.swift */,
+				D8332A8E2D01FC4900D1E98B /* UIImage+Extension.swift */,
+			);
+			path = Extensions;
+			sourceTree = "<group>";
+		};
 		D8F6966E2CE65F1700454076 /* CustomCell */ = {
 			isa = PBXGroup;
 			children = (
@@ -501,6 +546,7 @@
 				D883C5602CCC18A10064E51A /* AboutViewController.xib in Resources */,
 				D85322642CCAE71700948900 /* Assets.xcassets in Resources */,
 				D8F696762CE65F9300454076 /* VideoCell.xib in Resources */,
+				D8332A972D02621F00D1E98B /* OptionCell.xib in Resources */,
 				D883C5542CCC18540064E51A /* VideosViewController.xib in Resources */,
 				D85322622CCAE71700948900 /* Main.storyboard in Resources */,
 				D883C5502CCC09710064E51A /* HomeViewController.xib in Resources */,
@@ -558,19 +604,25 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D8332A962D02621F00D1E98B /* OptionCell.swift in Sources */,
+				D8332A8F2D01FC4900D1E98B /* UIImage+Extension.swift in Sources */,
 				D853225F2CCAE71700948900 /* ViewController.swift in Sources */,
+				D8332A8D2D01FA1900D1E98B /* UIColor+Extension.swift in Sources */,
 				D86FBA972CCC659300758FB5 /* NetworkError.swift in Sources */,
 				D886B7732CF93D3700DCD6E2 /* ChannelPresenter.swift in Sources */,
 				D8E4B3EE2CFDF1DF001E2112 /* AboutPresenter.swift in Sources */,
 				D883C5402CCBFEF90064E51A /* ChannelModel.swift in Sources */,
+				D8E7C3072CFF57D400932C2B /* BaseViewController.swift in Sources */,
 				D8F696712CE65F7800454076 /* ChannelCell.swift in Sources */,
 				D86FBAA42CCC849400758FB5 /* HomePresenter.swift in Sources */,
 				D88012142CF6C89E0028B8C0 /* VideosProvider.swift in Sources */,
 				D883C5532CCC18540064E51A /* VideosViewController.swift in Sources */,
 				D885A8052CCB53050005BCCD /* PlaylistModel.swift in Sources */,
 				D8F696602CE57D3100454076 /* Utils.swift in Sources */,
+				D8332A922D025E3600D1E98B /* TabsView.swift in Sources */,
 				D883C5572CCC18670064E51A /* PlaylistsViewController.swift in Sources */,
 				D88012162CF6C8AC0028B8C0 /* VideosPresenter.swift in Sources */,
+				D8E7C3092CFF617600932C2B /* UITableView+Extension.swift in Sources */,
 				D86FBA992CCC65AD00758FB5 /* RequestModel.swift in Sources */,
 				D883C55B2CCC18920064E51A /* ChannelViewController.swift in Sources */,
 				D853225B2CCAE71700948900 /* AppDelegate.swift in Sources */,

@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="21507" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="21507" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="Y5r-Zx-uvC">
     <device id="retina6_12" orientation="portrait" appearance="light"/>
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="21505"/>
@@ -16,8 +16,15 @@
                         <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Gvt-G4-jHw" customClass="TabsView" customModule="YoutubeClone" customModuleProvider="target">
+                                <rect key="frame" x="0.0" y="103" width="393" height="45"/>
+                                <color key="backgroundColor" name="backgroundColorYT"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="45" id="CQb-8e-mIO"/>
+                                </constraints>
+                            </view>
                             <containerView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Kbl-3V-CVE">
-                                <rect key="frame" x="0.0" y="59" width="393" height="759"/>
+                                <rect key="frame" x="0.0" y="148" width="393" height="670"/>
                                 <connections>
                                     <segue destination="kjv-0H-FTa" kind="embed" id="Chl-Ux-iXm"/>
                                 </connections>
@@ -26,16 +33,23 @@
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                         <color key="backgroundColor" name="backgroundColor"/>
                         <constraints>
+                            <constraint firstItem="Gvt-G4-jHw" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" id="Efl-cS-C0P"/>
+                            <constraint firstItem="Gvt-G4-jHw" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="G4o-bd-K89"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="Kbl-3V-CVE" secondAttribute="trailing" id="MOz-PD-xcP"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="Kbl-3V-CVE" secondAttribute="bottom" id="Qn5-3Z-t5i"/>
+                            <constraint firstItem="Kbl-3V-CVE" firstAttribute="top" secondItem="Gvt-G4-jHw" secondAttribute="bottom" id="drz-a3-EZg"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="Gvt-G4-jHw" secondAttribute="trailing" id="fkt-CL-5bi"/>
                             <constraint firstItem="Kbl-3V-CVE" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="twx-Eb-MDc"/>
-                            <constraint firstItem="Kbl-3V-CVE" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" id="yVt-j9-5rv"/>
                         </constraints>
                     </view>
+                    <navigationItem key="navigationItem" id="efw-WP-bhS"/>
+                    <connections>
+                        <outlet property="tabsView" destination="Gvt-G4-jHw" id="Xvg-JE-PRP"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="13" y="132"/>
+            <point key="canvasLocation" x="939.69465648854953" y="131.69014084507043"/>
         </scene>
         <!--Root Page View Controller-->
         <scene sceneID="mOg-Sd-x7g">
@@ -43,11 +57,32 @@
                 <pageViewController autoresizesArchivedViewToFullSize="NO" transitionStyle="scroll" navigationOrientation="horizontal" spineLocation="none" id="kjv-0H-FTa" customClass="RootPageViewController" customModule="YoutubeClone" customModuleProvider="target" sceneMemberID="viewController"/>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="7ZG-s3-Nyg" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="810" y="132"/>
+            <point key="canvasLocation" x="1736.6412213740457" y="131.33802816901408"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="dte-0b-G1L">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="Y5r-Zx-uvC" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="U3S-xE-eg0">
+                        <rect key="frame" x="0.0" y="59" width="393" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="BYZ-38-t0r" kind="relationship" relationship="rootViewController" id="2oS-rd-eyN"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="evG-CN-fsG" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="12.977099236641221" y="131.69014084507043"/>
         </scene>
     </scenes>
     <resources>
         <namedColor name="backgroundColor">
+            <color red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+        <namedColor name="backgroundColorYT">
             <color red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </namedColor>
     </resources>

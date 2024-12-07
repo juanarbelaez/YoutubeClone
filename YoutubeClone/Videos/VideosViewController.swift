@@ -24,10 +24,7 @@ class VideosViewController: UIViewController {
     }
     
     func configTableView(){
-        
-        let nibVideos = UINib(nibName: "\(VideoCell.self)", bundle: nil)
-        tableViewVideos.register(nibVideos, forCellReuseIdentifier: "\(VideoCell.self)")
-        
+        tableViewVideos.register(cell: VideoCell.self)
         tableViewVideos.separatorColor = .clear
         tableViewVideos.delegate = self
         tableViewVideos.dataSource = self
@@ -45,9 +42,7 @@ extension VideosViewController: UITableViewDelegate, UITableViewDataSource{
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let video = videoList[indexPath.row]
-        guard let cell = tableView.dequeueReusableCell(withIdentifier: "\(VideoCell.self)", for: indexPath) as? VideoCell else {
-            return UITableViewCell()
-        }
+        let cell = tableView.dequeueReusableCell(for: VideoCell.self, for: indexPath)
         cell.didTapDotsButton = {[weak self] in
             self?.configBottomSheet()
         }

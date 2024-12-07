@@ -22,8 +22,8 @@ class PlaylistCell: UITableViewCell {
     
     override func awakeFromNib() {
         super.awakeFromNib()
-        dotsImage.image = UIImage(named: "dots")?.withRenderingMode(.alwaysTemplate)
-        dotsImage.tintColor = UIColor(named: "whiteColor")
+        dotsImage.image = .dotsImage
+        dotsImage.tintColor = .whiteColor
     }
     
     

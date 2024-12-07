@@ -25,22 +25,29 @@ class HomeViewController: UIViewController {
     }
     
     func configTableView(){
-        let nibChannel = UINib(nibName: "\(ChannelCell.self)", bundle: nil)
-        tableViewHome.register(nibChannel, forCellReuseIdentifier: "\(ChannelCell.self)")
         
-        let nibVideo = UINib(nibName: "\(VideoCell.self)", bundle: nil)
-        tableViewHome.register(nibVideo, forCellReuseIdentifier: "\(VideoCell.self)")
         
-        let nibPlaylist = UINib(nibName: "\(PlaylistCell.self)", bundle: nil)
-        tableViewHome.register(nibPlaylist, forCellReuseIdentifier: "\(PlaylistCell.self)")
         
-        tableViewHome.register(SectionTitleView.self, forHeaderFooterViewReuseIdentifier: "\(SectionTitleView.self)")
+        tableViewHome.register(cell: ChannelCell.self)
+        tableViewHome.register(cell: VideoCell.self)
+        tableViewHome.register(cell: PlaylistCell.self)
+        tableViewHome.registerFromClass(headerFooterView: SectionTitleView.self)
         
         tableViewHome.delegate = self
         tableViewHome.dataSource = self
         tableViewHome.separatorColor = .clear
         tableViewHome.backgroundColor = .clear
-        
+        tableViewHome.contentInset = UIEdgeInsets(top: -15, left: 0, bottom: -80, right: 0)
+    }
+    
+    func scrollViewDidScroll(_ scrollView: UIScrollView) {
+        let pan = scrollView.panGestureRecognizer
+        let velocity = pan.velocity(in: scrollView).y
+        if velocity < -5 {
+            navigationController?.setNavigationBarHidden(true, animated: true)
+        }else if velocity > 5 {
+            navigationController?.setNavigationBarHidden(false, animated: true)
+        }
         
     }
 }
@@ -57,16 +64,12 @@ extension HomeViewController: UITableViewDelegate, UITableViewDataSource{
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let item = objectList[indexPath.section]
         if let channel = item as? [ChannelModel.Items]{
-            guard let channelCell = tableView.dequeueReusableCell(withIdentifier: "\(ChannelCell.self)", for: indexPath) as? ChannelCell else {
-                return UITableViewCell()
-            }
+            let channelCell = tableView.dequeueReusableCell(for: ChannelCell.self, for: indexPath)
             channelCell.configCell(model: channel[indexPath.row])
             return channelCell
             
         }else if let playlistItems = item as? [PlaylistItemModel.Item]{
-            guard let playlistItemsCell = tableView.dequeueReusableCell(withIdentifier: "\(VideoCell.self)", for: indexPath) as? VideoCell else {
-                return UITableViewCell()
-            }
+            let playlistItemsCell = tableView.dequeueReusableCell(for: VideoCell.self, for: indexPath)
             playlistItemsCell.didTapDotsButton = {[weak self] in
                 self?.configBottomSheet()
             }
@@ -74,9 +77,7 @@ extension HomeViewController: UITableViewDelegate, UITableViewDataSource{
             return playlistItemsCell
             
         }else if let videos = item as? [VideoModel.Item]{
-            guard let videoCell = tableView.dequeueReusableCell(withIdentifier: "\(VideoCell.self)", for: indexPath) as? VideoCell else {
-                return UITableViewCell()
-            }
+            let videoCell = tableView.dequeueReusableCell(for: VideoCell.self, for: indexPath)
             videoCell.didTapDotsButton = {[weak self] in
                 self?.configBottomSheet()
             }
@@ -84,9 +85,7 @@ extension HomeViewController: UITableViewDelegate, UITableViewDataSource{
             return videoCell
             
         }else if let playlist = item as? [PlaylistModel.Item]{
-            guard let playlistCell = tableView.dequeueReusableCell(withIdentifier: "\(PlaylistCell.self)", for: indexPath) as? PlaylistCell else {
-                return UITableViewCell()
-            }
+            let playlistCell = tableView.dequeueReusableCell(for: PlaylistCell.self, for: indexPath)
             playlistCell.didTapDotsButton = {[weak self] in
                 self?.configBottomSheet()
             }
